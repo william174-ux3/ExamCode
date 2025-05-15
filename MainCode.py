@@ -51,8 +51,7 @@ percent_tied = 100 - percent_won - percent_lost
 if game_history == "yes":
     print("📈📈📈 Game Statistics 📈📈📈")
     print(f" Won: {percent_won:.2f} \t "
-          f" Lost: {percent_lost:.2f}")
+          f" Lost: {percent_lost:.2f}\n")
 
-# end output of the quiz
-else:
-    print("👍👍👍 Thanks for playing my maths quiz 👍👍👍")
+# output for after the game history
+print("👍👍👍 Thanks for playing my maths quiz 👍👍👍")
