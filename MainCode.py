@@ -5,6 +5,23 @@
 # imports the random library
 import random
 
+# Word to number conversion dictionary
+word_to_number = {
+    "zero": 0,
+    "one": 1,
+    "two": 2,
+    "three": 3,
+    "four": 4,
+    "five": 5,
+    "six": 6,
+    "seven": 7,
+    "eight": 8,
+    "nine": 9,
+    "ten": 10,
+    "eleven": 11,
+    "twelve": 12
+}
+
 # initialise game variables for game history
 questions_answered = 0
 questions_correct = 0
@@ -15,35 +32,39 @@ questions_wrong = 0
 print("Hello, welcome to my maths quiz!")
 print("Answer these basic facts questions...\n")
 
-# asks how many rounds they would like to do
-num_questions = int(input("How many questions? "))
+# asking the question
+while True:
+    answer = input("How many questions? ").strip().lower()
 
-# producing the random number equations
+    # converting the word into a number
+    if answer.isdigit():
+        num_questions = int(answer)
+        break
+    elif answer in word_to_number:
+        num_questions = word_to_number[answer]
+        break
+    else:
+        print("Please enter a valid number (digit or word up to twelve).")
+
+# asking the questions
 for index in range(num_questions):
     num1 = random.randint(1, 12)
     num2 = random.randint(1, 12)
 
-    # asking the question
-    answer = int(input(f"Question {index + 1}: What is {num1} + {num2}? "))
+    while True:
+        try:
+            answer = int(input(f"Question {index + 1}: What is {num1} + {num2}? "))
+            break
+        except ValueError:
+            print("Please enter a number.")
 
-    # checking the answer
     if answer == num1 + num2:
         print("Correct! \n")
         questions_correct += 1
     else:
         print(f"Oh no! The correct answer is {num1 + num2}!\n")
         questions_wrong += 1
-
-    # count this question as the user answers it
     questions_answered += 1
-
-# checking to see if the answer for the number of
-# questions are only numbers
-
-
-# checking to see if the answer for the questions
-# are numbers
-
 
 # calculate the percentages for the statistics
 percent_correct = (questions_correct / questions_answered) * 100
