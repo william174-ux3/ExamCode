@@ -5,8 +5,7 @@
 # imports the random library
 import random
 
-# converting the word into a number with
-# a dictionary
+# Word to number conversion dictionary
 word_to_number = {
     "zero": 0,
     "one": 1,
@@ -31,7 +30,7 @@ questions_wrong = 0
 # description of what you need to do
 # and how to play
 print("Hello, welcome to my maths quiz!")
-print("Answer these addition questions...\n")
+print("Answer these basic facts questions...\n")
 
 # asking the question
 while True:
@@ -45,7 +44,7 @@ while True:
         num_questions = word_to_number[answer]
         break
     else:
-        print("Please enter a valid number (number or a word up to twelve).")
+        print("Please enter a valid number (digit or word up to twelve).")
 
 # asking the questions
 for index in range(num_questions):
