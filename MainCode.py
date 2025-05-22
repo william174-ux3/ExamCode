@@ -7,7 +7,7 @@ import random
 
 # converting the word into a number with
 # a dictionary
-word_to_number = {
+word_to_a_number = {
     "zero": 0,
     "one": 1,
     "two": 2,
@@ -39,16 +39,16 @@ while True:
 
     # converting the word into a number
     if answer.isdigit():
-        num_questions = int(answer)
+        number_questions = int(answer)
         break
-    elif answer in word_to_number:
-        num_questions = word_to_number[answer]
+    elif answer in word_to_a_number:
+        number_questions = word_to_a_number[answer]
         break
     else:
         print("Please enter a valid number (number or a word up to twelve).")
 
 # asking the questions
-for index in range(num_questions):
+for index in range(number_questions):
     num1 = random.randint(1, 12)
     num2 = random.randint(1, 12)
 
