@@ -1,5 +1,5 @@
 # DATE 15/05/2025
-# PROGRAM Maths Quiz
+# PROGRAM Addition Maths Quiz
 # AUTHOR William Eric Eames
 
 # imports the random library
