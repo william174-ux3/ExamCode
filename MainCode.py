@@ -45,7 +45,7 @@ while True:
         number_questions = word_to_a_number[answer]
         break
     else:
-        print("Please enter a valid number (number or a word up to twelve).")
+        print("Please enter a valid number (number or a word up).")
 
 # asking the questions
 for index in range(number_questions):
